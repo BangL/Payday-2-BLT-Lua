@@ -1,9 +1,4 @@
 
-local mvec3_add = mvector3.add
-local mvec3_mul = mvector3.multiply
-local mvec3_set = mvector3.set
-local tmp_vec1 = Vector3()
-
 _G.Utils = _G.Utils or {}
 
 if false then
@@ -286,21 +281,12 @@ function Utils:GetCrosshairRay( from, to, slot_mask )
 
 	slot_mask = slot_mask or "bullet_impact_targets"
 
-	if not from then
-		local player = managers.player:player_unit()
-		if player then
-			from = player:movement():m_head_pos()
-		else
-			from = managers.viewport:get_current_camera_position()
-		end
-	end
+	local player = managers.player:player_unit()
+	local from = from or player:camera():position()
+	local mvecTo = Vector3()
 
-	if not to then
-		to = tmp_vec1
-		mvec3_set( to, player:camera():forward() )
-		mvec3_mul( to, 20000 )
-		mvec3_add( to, from )
-	end
+	mvector3.set( mvecTo, player:camera():forward() )
+	mvector3.add(to, from)
 
 	local colRay = World:raycast("ray", from, to, "slot_mask", managers.slot:get_mask(slot_mask))
 	return colRay
