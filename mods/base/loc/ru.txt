@@ -9,7 +9,7 @@
 	"blt_mod_outdated" : "Данный мод предназначен для более старой версии BLT и больше не поддерживается; разработчик должен обновить данный мод до последней версии BLT. У вас возникнут ошибки и сбои, если вы оставите данный мод включенным.",
 	"blt_mod_missing_dependencies" : "Данный мод требует запуска других модов, которые не установлены, поэтому он отключен.",
 	"blt_mod_missing_dependency" : "    Отсутствует: $dependency",
-	"blt_mod_missing_dependency_download" : "    Отсутствует: $dependency, добавьте в Менджер Загрузок",
+	"blt_mod_missing_dependency_download" : "    Отсутствует: $dependency, добавьте в Менеджер Загрузок",
 	"blt_mod_dependency_disabled" : "Данный мод требует запуска других модов, которые не включены, поэтому он отключен.",
 	"blt_mod_disabled_dependency" : "    Отключен: $dependency",
 
@@ -73,8 +73,8 @@
 	"blt_checking_updates_required" : "Требуются обновления",
 	"blt_checking_updates_required_help" : "Обновления для ваших модов доступны, посетите Менеджер Загрузок!",
 	"blt_view_patch_notes" : "Посмотреть изменения",
-	"blt_checking_updates_none_required" : "Актуален",
-	"blt_checking_updates_none_required_help" : "Нет модов для обновления!",
+	"blt_checking_updates_none_required" : "Нет обновлений",
+	"blt_checking_updates_none_required_help" : "Все моды актуальны!",
 
 	"blt_language_select" : "Язык",
 	"blt_language_select_desc" : "Выберите язык для BLT",
